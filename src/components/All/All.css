@@ -1,0 +1,121 @@
+.all {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin: auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    overflow: scroll;
+}
+
+.all__add {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #eee;
+}
+
+.button-more {
+    background-image: url('../../../src/assets/img/expand.svg');
+    opacity: 0.15;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-size: 35px;
+    border: none;
+    height: 35px;
+    width: 35px;
+    margin: 12px 0 0 6px;
+}
+
+.button-more:hover {
+    cursor: pointer;
+}
+
+.input-add {
+    width: 100%;
+    height: 60px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    font-style: normal;
+    margin: 0 0 0 15px;
+    outline: none;
+}
+
+.input-add::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    font-style: italic;
+    color: gray;
+}
+
+.input-add:active {
+    border: none;
+}
+
+.checkbox.checkbox__container {
+    display: inline-block;
+    position: relative;
+    padding-left: 55px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-bottom: 1px solid #eee;
+}
+
+.checkbox.checkbox__container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox.checkbox__container input:checked ~ .checkbox__checkmark:after {
+    opacity: 1;
+}
+
+.checkbox.checkbox__container .checkbox__checkmark {
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    transition: background-color 0.25s ease;
+    border-radius: 100%;
+    border: 1px solid #eee;
+}
+
+.checkbox.checkbox__container .checkbox__checkmark:after {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 3px;
+    width: 9px;
+    height: 18px;
+    border: solid #55c279;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.checkbox.checkbox__container .checkbox__body {
+    line-height: 3;
+    transition: color 0.25s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.checkbox.checkbox__container input:checked ~ .checkbox__body {
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+    opacity: 0.5;
+}
