@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  background-color: #eee;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  padding: 0 0 7vh;
+}
+
+.app__main {
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 70px;
+  font-style: normal;
+  opacity: 0.5;
+  color: #ccadad;
+  padding: 5vh 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  margin: auto;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  overflow: scroll;
+}
+
+.main__add {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #eee;
+}
+
+.check-all {
+  background-image: url('../img/expand.svg');
+  opacity: 0.15;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: 35px;
+  border: none;
+  height: 35px;
+  width: 35px;
+  margin: 12px 0 0 6px;
+}
+
+.main__show-all-btn:hover {
+  cursor: pointer;
+}
+
+.input-add {
+  width: 100%;
+  height: 60px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  font-style: normal;
+  margin: 0 0 0 15px;
+  outline: none;
+}
+
+.input-add::placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  font-style: italic;
+  color: gray;
+}
+
+.input-add:active {
+  border: none;
+}

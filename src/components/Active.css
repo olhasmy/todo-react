@@ -1,9 +1,0 @@
-.active {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 60vw;
-    height: 60vh;
-    margin: auto;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
