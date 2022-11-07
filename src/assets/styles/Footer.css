@@ -1,42 +1,42 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 45px;
-    bottom: 0;
-    width: 100%;
-    padding: 0 10px;
-    border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  bottom: 0;
+  width: 100%;
+  padding: 0 10px;
+  border-top: 1px solid #eee;
 }
 
 .footer__amount {
-    background-color: transparent;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 14px;
-    color: gray;
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+  color: gray;
 }
 
 .footer__buttons {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .button {
-    background-color: transparent;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 14px;
-    color: gray;
-    cursor: pointer;
-    border: none;
-    padding: 9px;
-    border-radius: 3px;
-    text-decoration: none;
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+  color: gray;
+  cursor: pointer;
+  border: none;
+  padding: 9px;
+  border-radius: 3px;
+  text-decoration: none;
 }
 
 .button:active {
-    border: 1px solid rgba(204, 173, 173, 0.5);
+  border: 1px solid rgba(204, 173, 173, 0.5);
 }
