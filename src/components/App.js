@@ -1,13 +1,20 @@
+import React from 'react';
 import '../assets/styles/App.css';
 import All from './pages/All';
 import Footer from './Footer';
 import Active from './pages/Active';
-import React from 'react';
 import Completed from './pages/Completed';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
-  const [todos, setTodos] = React.useState([]);
+  const [todos, setTodos] = React.useState(() => {
+    const savedTodos = localStorage.getItem('todos');
+    if (savedTodos) {
+      return JSON.parse(savedTodos);
+    } else {
+      return [];
+    }
+  });
   const [title, setTitle] = React.useState('');
   const [checked, setChecked] = React.useState(true);
   const leftTodo = [...todos].filter((todo) => todo.isCompleted === false);
@@ -32,7 +39,6 @@ function App() {
 
   const removeAllTodos = () => {
     setTodos(todos.filter((todo) => todo.isCompleted === false));
-    console.log('dfd');
   };
 
   const addTodo = (e) => {
@@ -47,6 +53,10 @@ function App() {
     ]);
     setTitle('');
   };
+
+  React.useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <div className="app">
@@ -65,6 +75,7 @@ function App() {
               className="input-add"
               required
               onChange={(e) => setTitle(e.target.value)}
+              name="title"
               value={title}
               type="text"
               placeholder="What needs to be done?"
