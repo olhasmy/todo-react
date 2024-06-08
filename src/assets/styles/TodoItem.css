@@ -1,7 +1,6 @@
 .checkbox.checkbox__container {
   display: inline-block;
   position: relative;
-  padding-left: 55px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -10,7 +9,7 @@
   border-bottom: 1px solid #eee;
 }
 
-.checkbox.checkbox__container input {
+.checkbox__input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -18,7 +17,7 @@
   width: 0;
 }
 
-.checkbox.checkbox__container input:checked ~ .checkbox__checkmark:after {
+.checkbox__input:checked ~ .checkbox__checkmark:after {
   opacity: 1;
 }
 
@@ -49,12 +48,14 @@
 }
 
 .checkbox.checkbox__container .checkbox__body {
-  line-height: 3;
   transition: color 0.25s ease;
+  color: #111;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-  font-size: 20px;
+  font-size: calc(1em + 0.2vw);
+  line-height: 1.5;
   font-style: normal;
+  padding: 15px 35px 15px 50px;
 }
 
 .checkbox__completed {
@@ -66,7 +67,7 @@
 .delete-btn {
   position: absolute;
   top: 14px;
-  right: 25px;
+  right: 10px;
   width: 30px;
   height: 30px;
   background-image: url('../../assets/img/icon__cross.svg');
@@ -76,13 +77,14 @@
   background-repeat: no-repeat;
   border: none;
   border-radius: 50%;
-  opacity: 0;
+  opacity: 0.2;
+  display: none;
+}
+
+.delete-btn_active {
+  display: block;
 }
 
 .delete-btn:hover {
   cursor: pointer;
-}
-
-.checkbox:hover .delete-btn {
-  opacity: 0.2;
 }

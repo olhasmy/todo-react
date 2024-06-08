@@ -1,6 +1,6 @@
 <h1 style='text-align: center;'>TODO приложение</h1>
 
-<a href='https://gonzoooo.github.io/todo-react/'><img src="./src/assets/img/screenshot.png" alt="фото приложения"></a>
+<a href='https://gonzoooo.github.io/todo-react/'><img src="./src/assets/img/to-do.png" alt="фото приложения"></a>
 
 ### Приложение списка дел с возможностью добавления, маркировки, сортировки и удаления дел.
 

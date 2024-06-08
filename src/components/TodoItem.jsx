@@ -5,6 +5,7 @@ function TodoItem({ todo, changeTodo, removeTodo }) {
   return (
     <label className="checkbox checkbox__container">
       <input
+        className="checkbox__input"
         type="checkbox"
         onClick={() => {
           changeTodo(todo._id);
@@ -20,7 +21,7 @@ function TodoItem({ todo, changeTodo, removeTodo }) {
       >
         {todo.title}
       </p>
-      <button className="delete-btn" onClick={() => removeTodo(todo._id)} />
+      <button className={todo.isCompleted ? 'delete-btn delete-btn_active' : 'delete-btn'} onClick={() => removeTodo(todo._id)} />
     </label>
   );
 }

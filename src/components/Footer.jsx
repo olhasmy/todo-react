@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/styles/Footer.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Footer({ removeAllTodos, leftTodo }) {
   return (
@@ -9,24 +9,24 @@ function Footer({ removeAllTodos, leftTodo }) {
       <nav>
         <ul className="footer__buttons">
           <li>
-            <Link className="button" to="/">
+            <NavLink className={({ isActive }) => (isActive ? 'footer__button footer__button_active' : 'footer__button')} to="/">
               All
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="button" to="/active">
+            <NavLink className={({ isActive }) => (isActive ? 'footer__button footer__button_active' : 'footer__button')} to="/active">
               Active
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="button" to="/completed">
+            <NavLink className={({ isActive }) => (isActive ? 'footer__button footer__button_active' : 'footer__button')} to="/completed">
               Completed
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
       <div className="footer__button-clear">
-        <button className="button" onClick={removeAllTodos}>
+        <button className="footer__button" onClick={removeAllTodos}>
           Clear completed
         </button>
       </div>

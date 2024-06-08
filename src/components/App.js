@@ -15,6 +15,7 @@ function App() {
       return [];
     }
   });
+
   const [title, setTitle] = React.useState('');
   const [checked, setChecked] = React.useState(true);
   const leftTodo = [...todos].filter((todo) => todo.isCompleted === false);
@@ -103,7 +104,7 @@ function App() {
               }
             />
             <Route
-              exact
+              end
               path="/"
               element={
                 <All
